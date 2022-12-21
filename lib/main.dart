@@ -33,9 +33,11 @@ class _MyAppState extends State<MyApp> {
     authService.getUserData(context);
   }
 
+  final scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      key: scaffoldKey,
       debugShowCheckedModeBanner: false,
       title: 'Famazon',
       theme: ThemeData(
@@ -52,11 +54,26 @@ class _MyAppState extends State<MyApp> {
         useMaterial3: true, // can remove this line
       ),
       onGenerateRoute: (settings) => generateRoute(settings),
-      home: Provider.of<UserProvider>(context).user.token.isNotEmpty
-          ? Provider.of<UserProvider>(context).user.type == 'user'
-              ? const BottomBar()
-              : const AdminScreen()
-          : const AuthScreen(),
+      //home: Provider.of<UserProvider>(context).user.token.isNotEmpty
+          //? Provider.of<UserProvider>(context).user.type == 'user'
+              //? const BottomBar()
+             // : const AdminScreen()
+          //: const AuthScreen(),
+      home: Builder(builder: (context) {
+        return FutureBuilder(
+          future: authService.getUserData(context),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.done) {
+              return Provider.of<UserProvider>(context).user.token.isNotEmpty
+                  ? Provider.of<UserProvider>(context).user.type == 'user'
+                      ? const BottomBar()
+                      : const AdminScreen()
+                  : const AuthScreen();
+            }
+            return const Center(child: CircularProgressIndicator());
+          },
+        );
+      }),
     );
   }
 }

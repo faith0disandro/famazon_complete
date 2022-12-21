@@ -93,7 +93,7 @@ class _AuthScreenState extends State<AuthScreen> {
               ),
               if (_auth == Auth.signup)
                 Container(
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
                   color: GlobalVariables.backgroundColor,
                   child: Form(
                     key: _signUpFormKey,
@@ -133,7 +133,7 @@ class _AuthScreenState extends State<AuthScreen> {
               ListTile(
                 tileColor: _auth == Auth.signin
                     ? GlobalVariables.backgroundColor
-                    : Color(0xff25221E),
+                    : const Color(0xff25221E),
                 title: const Text(
                   'Sign in',
                   style: TextStyle(
