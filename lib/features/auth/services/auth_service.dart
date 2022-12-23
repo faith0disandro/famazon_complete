@@ -91,7 +91,7 @@ class AuthService {
   }
 
   // get user data
-  Future<void> getUserData(
+  void getUserData(
     BuildContext context,
   ) async {
     try {
@@ -125,7 +125,7 @@ class AuthService {
         userProvider.setUser(userRes.body);
       }
     } catch (e) {
-      showSnackBar(context, e.toString());
+      debugPrint(e.toString());
     }
   }
 }
