@@ -65,7 +65,7 @@ class _CartProductState extends State<CartProduct> {
                       width: 235,
                       padding: const EdgeInsets.only(left: 10, top: 5),
                       child: Text(
-                        '\$${product.price}',
+                        '\$${product.price.toStringAsFixed(2)}',
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 20,

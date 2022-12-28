@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/faithdisandro/Desktop/famazon/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-fil/values-fil.xml",
+            "map": [
+                {
+                    "source": "/Users/faithdisandro/.gradle/caches/transforms-3/a728c9e192b18d8f79b5a42c4b3e0c54/transformed/jetified-play-services-wallet-18.1.2/res/values-fil/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "203",
+                        "endColumns": "107",
+                        "endOffsets": "310"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "111",
+                        "endOffsets": "162"
+                    }
+                }
+            ]
+        }
+    ]
+}

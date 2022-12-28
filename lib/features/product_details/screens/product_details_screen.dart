@@ -190,7 +190,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                   ),
                   children: [
                     TextSpan(
-                      text: '\$${widget.product.price}',
+                      text: '\$${widget.product.price.toStringAsFixed(2)}',
                       style: const TextStyle(
                         fontSize: 22,
                         color: Colors.green,

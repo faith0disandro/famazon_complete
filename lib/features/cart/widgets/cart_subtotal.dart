@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
+import "dart:core";
 
 class CartSubtotal extends StatelessWidget {
   const CartSubtotal({super.key});
@@ -11,8 +12,12 @@ class CartSubtotal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final user = context.watch<UserProvider>().user;
-    int sum = 0;
-    user.cart.map((e) => sum += e['quantity']*e['product']['price'] as int).toList();
+    double sum = 0;
+    user.cart
+        .map((e) => sum += 
+                (e['quantity'] * e['product']['price']).toDouble()
+            as double)
+        .toList();
     return Container(
       margin: const EdgeInsets.all(10),
       child: Row(children: [
@@ -24,7 +29,7 @@ class CartSubtotal extends StatelessWidget {
           ),
         ),
         Text(
-          '\$$sum',
+          '\$${sum.toStringAsFixed(2)}',
           style: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,

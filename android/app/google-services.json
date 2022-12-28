@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1060064382327",
+    "project_id": "f-f2e45",
+    "storage_bucket": "f-f2e45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060064382327:android:3b4aba900e41fce77ba572",
+        "android_client_info": {
+          "package_name": "com.example.famazon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060064382327-6l3ape4e8d8lfeg8krjg4frp4erpq80j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDPtP4eSUQWrHqW23rd6RFay75DmYIiIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060064382327-6l3ape4e8d8lfeg8krjg4frp4erpq80j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1060064382327-riia448e9grlukhlbt0snv9g8nou816v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.famazon"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

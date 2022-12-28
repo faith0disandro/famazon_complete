@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-String uri = 'https://git.heroku.com/famazon.git';
+String uri = 'https://famazon.onrender.com';
 
 class GlobalVariables {
   // COLORS

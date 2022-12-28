@@ -12,7 +12,7 @@ const { eventNames } = require('./models/user');
 
 // Initialize
 const app = express();
-const PORT = process.eventNames.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 const DB = "mongodb+srv://faith:wantsomefood@cluster0.zk9jv1f.mongodb.net/?retryWrites=true&w=majority"
 
 // Middleware

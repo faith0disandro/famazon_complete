@@ -1,4 +1,5 @@
 import 'package:famazon/constants/global_variables.dart';
+import 'package:famazon/features/account/services/account_services.dart';
 import 'package:famazon/features/admin/screens/analytics_screen.dart';
 import 'package:famazon/features/admin/screens/orders_screen.dart';
 import 'package:famazon/features/admin/screens/posts_screeen.dart';
@@ -51,12 +52,12 @@ class _AdminScreenState extends State<AdminScreen> {
                   color: Colors.black,
                 ),
               ),
-              const Text(
-                'Admin',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
+              TextButton(
+                style: ButtonStyle(
+                  foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
                 ),
+                onPressed: () => AccountServices().logout(context),
+                child: const Text('Admin', style: TextStyle(fontSize: 22)),
               )
             ],
           ),
